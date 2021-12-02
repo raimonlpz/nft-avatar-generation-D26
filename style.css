@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100vw;
+    max-height: 100vh;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.logo {
+    position: absolute;
+    width: 190px;
+    border-radius: 10px;
+    z-index: 100;
+    top: 30px;
+    left: 20px;
+    transform: rotateZ(4deg);
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.content {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width:  90%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 8px 2px rgb(65, 65, 65);
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    overflow-y: scroll;
+}
+
+.canvases {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+.canvas {
+    border: 1px solid white;
+    box-shadow: 0 0 8px 4px rgb(0, 0, 0);
+    width: 300px;
+    height: 300px;
+    border-radius: 6px;
+    transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+    background-color: rgb(0, 0, 0);
+    border: none;
+}
+
+.canvas:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.cta {
+    z-index: 100;
+    position: absolute;
+    right: 25px;
+    bottom: 5px;
+    width: 190px;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cta:hover {
+    cursor: pointer;
+    transform:rotate(-90deg);
+}
+
+.cta  img{
+    width: 100%;
+}
+
+
+button {
+    outline: none;
+    color: transparent;
+}
+
+a {
+ outline: none;
+}
+
+.combo-display {
+    position: absolute;
+    bottom: 0;
+    left:0;
+    width: 25.5vw;
+    height: 35vh;
+    border-radius: 5px;
+    background-color: rgb(5, 5, 5);
+    border: 1px solid rgb(112, 112, 112);
+    overflow-y: scroll;
+    font-family: 'Courier New', Courier, monospace;
+    color: whitesmoke;
+    padding: .5rem;
+    transition: all .6s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    transform: translateY(85%);
+}
+
+
+.combo-display:hover {
+    cursor: pointer;
+}
+
+
+.select-mode {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    z-index: 300;
+    font-size: 30px;
+}
+
+canvas {
+    background: black;
+}
+
+.select-mode select {
+    background-color: rgb(210, 255, 107);
+    border-radius: 4px;
+    width: max-content;
+    outline: none;
+    border: none;
+    padding: 5px;
+    font-size:20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-style:italic;
+    font-weight: 100;
+
+}
+
+
+
+.photo-hint {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 100%);
+    width: 400px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.photo-hint img {
+    width: 25%;
+    margin:0;
+    padding:0;
+    height: auto;
+    border-radius: 3px;
+    background-color: rgb(39, 39, 39);
+    padding: .5rem;
+    margin: .3rem;
+}
+
+
+.heartbeat, .cta {
+	-webkit-animation: heartbeat 1.5s ease-in-out infinite both;
+	        animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
+@-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+
+
+
+.download-block {
+      z-index: 100;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: blanchedalmond;
+      padding: .75rem;
+      font-family: sans-serif;
+      border: none;
+      border-radius: 4px;
+      background-color: rgb(24, 24, 24);
+      transition: all 1s ease-in-out;
+      text-transform: uppercase;
+}
+.download-block:hover {
+      cursor: pointer;
+      border: 1px solid cornsilk;
+}
+
+
+.download-block:disabled {
+    background-color: rgb(218, 218, 218);
+    color: white;
+    border: none;
+    cursor: none;
+}
